@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tóth Ábel Tibor – Board Game Arena-fejlesztő</title>
+  <meta name="description" content="Tóth Ábel Tibor társasjátékokat ültet át a Board Game Arenára.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="hu" href="hu.html">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a href="#" class="logo">Tóth Ábel Tibor</a>
+      <ul>
+        <li><a href="#publishers">Kiadók</a></li>
+        <li><a href="#games">Játékok</a></li>
+        <li><a href="#pricing">Árak</a></li>
+        <li><a href="#faq">GYIK</a></li>
+        <li><a href="#contact">Kapcsolat</a></li>
+        <li class="lang"><a href="index.html" hreflang="en" lang="en" aria-label="English">EN</a><span aria-hidden="true">/</span><a href="hu.html" hreflang="hu" lang="hu" aria-current="page">HU</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="decos" aria-hidden="true">
+        <svg class="deco deco-die" viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="14" width="72" height="72" rx="14"/><circle class="pip" cx="34" cy="34" r="6"/><circle class="pip" cx="66" cy="34" r="6"/><circle class="pip" cx="50" cy="50" r="6"/><circle class="pip" cx="34" cy="66" r="6"/><circle class="pip" cx="66" cy="66" r="6"/></svg>
+        <svg class="deco deco-meeple" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 10c8.5 0 14.5 6.5 14.5 14.5 0 5.5-2.5 9.5-6 12 10 2 25 6.5 29.5 12.5 2.5 3.5.5 8-5 9l-16 2.5 12 25c2 4.2-1 8.5-5.5 8.5H63L50 75 37 94H26.5c-4.5 0-7.5-4.3-5.5-8.5l12-25-16-2.5c-5.5-1-7.5-5.5-5-9C16.5 43 31.5 38.5 41.5 36.5c-3.5-2.5-6-6.5-6-12C35.5 16.5 41.5 10 50 10Z"/></svg>
+        <svg class="deco deco-card" viewBox="0 0 100 100" aria-hidden="true"><rect x="24" y="10" width="52" height="80" rx="7"/><path d="M50 34 60 50 50 66 40 50Z"/></svg>
+      </div>
+      <div class="wrap hero-grid">
+        <div>
+        <h1><span class="name-line">Tóth Ábel Tibor</span></h1>
+        <p class="role">Szabadúszó <a class="role-logo" href="https://boardgamearena.com/" target="_blank" rel="noopener"><img src="images/brand/bga-logo.webp" alt="Board Game Arena" width="500" height="220"></a> fejlesztő</p>
+        <p class="lead">Segítek a kiadóknak társasjátékaikat a Board Game Arenára vinni, a szabálykönyv első átolvasásától a kidolgozott online megjelenésig.</p>
+        <p class="lead-sub">Gyerekkorom óta szeretek játszani. Ma a játék a hobbim, a játékfejlesztés pedig az álommunkám.</p>
+        <ul class="hero-facts" aria-label="Rólam">
+          <li><svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>Budapest, Magyarország</li>
+          <li><svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v2.5L16 18h-3"/></svg>Magyar, angol</li>
+          <li class="available"><i class="status-dot" aria-hidden="true"></i>Új projekteket vállalok</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="#games">Játékaim</a>
+          <a class="btn btn-outline" href="#contact">Kapcsolatfelvétel</a>
+        </div>
+        <dl class="stats">
+          <div><dt>játék a BGA-n</dt><dd data-count="7">7</dd></div>
+          <div><dt>kiadó</dt><dd data-count="5">5</dd></div>
+          <div><dt>óta szabadúszó</dt><dd>2025</dd></div>
+        </dl>
+        </div>
+        <img class="portrait" src="images/profile.jpg" alt="Tóth Ábel Tibor portréja" width="320" height="320">
+      </div>
+    </section>
+
+    <section id="publishers" class="section wrap">
+      <h2>Kiadók, akikkel dolgoztam</h2>
+      <!-- Logos are the publishers' BGG images, in images/publishers/. -->
+      <ul class="publishers">
+        <li>
+          <a class="publisher" href="https://www.jeuxsynapsesgames.com/" target="_blank" rel="noopener">
+            <img src="images/publishers/synapses.png" alt="" loading="lazy">
+            <span>Synapses Games</span>
+          </a>
+        </li>
+        <li>
+          <a class="publisher" href="https://www.ravensburger.com/" target="_blank" rel="noopener">
+            <img src="images/publishers/ravensburger.jpg" alt="" loading="lazy">
+            <span>Ravensburger</span>
+          </a>
+        </li>
+        <li>
+          <a class="publisher" href="https://myamgames.hu/" target="_blank" rel="noopener">
+            <img src="images/publishers/myam.jpg" alt="" loading="lazy">
+            <span>Myam Games</span>
+          </a>
+        </li>
+        <li>
+          <a class="publisher" href="https://www.keenbean.studio/" target="_blank" rel="noopener">
+            <img src="images/publishers/keenbean.png" alt="" loading="lazy">
+            <span>Keen Bean Studio</span>
+          </a>
+        </li>
+        <li>
+          <a class="publisher" href="https://zacatrus.es/" target="_blank" rel="noopener">
+            <img src="images/publishers/zacatrus.png" alt="" loading="lazy">
+            <span>Zacatrus</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="games" class="section wrap">
+      <h2>BGA-ra átültetett játékaim</h2>
+      <div class="games">
+        <!-- Copy an <article> per game. Optional status badge for unreleased games: status-beta | status-alpha | status-dev. Images are the games' main BGG images, in images/. -->
+        <article class="game">
+          <img src="images/frostedblooms.jpg" alt="A Frosted Blooms doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Frosted Blooms</h3>
+            <p class="meta">Synapses Games, 1–4 játékos, 2026</p>
+            <p>Lapkadraftolós játék, amelyben a játékosok tíz fordulón át fagyos színekben pompázó tulipánkertet építenek.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=frostedblooms" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/449853/frosted-blooms" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/labyrinth.jpg" alt="A Labyrinth doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Labyrinth</h3>
+            <p class="meta">Ravensburger, 2–4 játékos, 1986</p>
+            <p>A klasszikus mozgó útvesztő: a lapkák tologatásával folyton változnak az utak, és az nyer, aki elsőként gyűjti össze kincseit.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=labyrinth" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/1219/labyrinth" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/gotwhatitbakes.jpg" alt="A Got What It Bakes? borítóképe" loading="lazy">
+          <div class="game-body">
+            <h3>Got What It Bakes?</h3>
+            <p class="meta">Myam Games, 1–4 játékos, 2025</p>
+            <p>Hangulatos sütögetős játék: hozzávaló-kockák választása és receptek teljesítése három fordulón át.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=gotwhatitbakes" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/449655/got-what-it-bakes" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/circadia.jpg" alt="A Circadia doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Circadia</h3>
+            <p class="meta">Synapses Games, 2–5 játékos, 2026</p>
+            <p>Gyűjtögetős kártyajáték, amelyben a szellemlényeket kell visszavezetni élőhelyeikre.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=circadia" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/454399/circadia" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+            <span class="status status-beta">Béta</span>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/postcards.jpg" alt="A Postcards doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Postcards</h3>
+            <p class="meta">Synapses Games, 1–4 játékos, 2025</p>
+            <p>Biciklis utazás Franciaország tájain: bélyegek és emléktárgyak gyűjtése, képeslapok küldése haza.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=postcards" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/429423/postcards" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/coatl.jpg" alt="A Cóatl doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Cóatl</h3>
+            <p class="meta">Synapses Games, 1–4 játékos, 2020</p>
+            <p>Színes elemek gyűjtése és a hatalmas tollas kígyó megépítése a jóslatkártyák szerint.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=coatl" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/274841/coatl" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/almighty.jpg" alt="Az Almighty doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Almighty</h3>
+            <p class="meta">Keen Bean Studio, 1–5 játékos, 2026</p>
+            <p>Isteni tettek a szerencsétlen halandók körében, a hívek és a dicsőség megszerzéséért.</p>
+            <p class="game-links">
+              <a href="https://boardgamegeek.com/boardgame/382158/almighty" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+            <span class="status status-dev">Fejlesztés alatt</span>
+          </div>
+        </article>
+        <article class="game">
+          <img src="images/cathood.jpg" alt="A Cathood doboza" loading="lazy">
+          <div class="game-body">
+            <h3>Cathood</h3>
+            <p class="meta">Zacatrus, 2–4 játékos, 2025</p>
+            <p>Macskás kincsek gyűjtése, a környék meghódítása, hogy a legkedveltebb macska legyen az övé.</p>
+            <p class="game-links">
+              <a href="https://boardgamearena.com/gamepanel?game=cathood" target="_blank" rel="noopener">Játék a BGA-n</a>
+              <a href="https://boardgamegeek.com/boardgame/383117/cathood" target="_blank" rel="noopener">BoardGameGeek</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="case-studies" class="section wrap">
+      <h2>Az asztalról a böngészőbe</h2>
+      <p class="section-intro">Három átültetés közelebbről: a fizikai játék és a Board Game Arena-változata egymás mellett.</p>
+      <div class="cases">
+        <article class="case">
+          <div class="case-media">
+            <figure class="case-shot">
+              <img src="images/cases/labyrinth-bga.jpg" alt="A Labyrinth táblája a Board Game Arenán" loading="lazy" width="860" height="540">
+              <figcaption>A Board Game Arenán</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img src="images/cases/labyrinth-table.jpg" alt="A Labyrinth táblája, kártyái és bábui az asztalon" loading="lazy">
+              <figcaption>Az asztalon</figcaption>
+            </figure>
+          </div>
+          <div class="case-body">
+            <h3>Labyrinth</h3>
+            <p class="meta">Ravensburger, 2–4 játékos, 1986</p>
+            <dl class="case-points">
+              <div><dt>A kihívás</dt><dd>Minden kör átalakítja az útvesztőt: a játékos betol egy lapkát, egy teljes sor vagy oszlop elcsúszik, és a bábuk az új utakon haladnak. Minden lépésnek egyértelműnek és animáltnak kell lennie, hogy a játékosok kövessék, mi változott.</dd></div>
+            </dl>
+            <a class="case-link" href="https://boardgamearena.com/gamepanel?game=labyrinth" target="_blank" rel="noopener">Játék a BGA-n</a>
+          </div>
+        </article>
+        <article class="case case-reverse">
+          <div class="case-media">
+            <figure class="case-shot">
+              <img src="images/cases/frostedblooms-bga.jpg" alt="A Frosted Blooms lapkái a Board Game Arenán" loading="lazy" width="1200" height="758">
+              <figcaption>A Board Game Arenán</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img src="images/cases/frostedblooms-table.jpg" alt="A Frosted Blooms lapkái és figurái az asztalon" loading="lazy">
+              <figcaption>Az asztalon</figcaption>
+            </figure>
+          </div>
+          <div class="case-body">
+            <h3>Frosted Blooms</h3>
+            <p class="meta">Synapses Games, 1–4 játékos, 2026</p>
+            <dl class="case-points">
+              <div><dt>A kihívás</dt><dd>Minden kert egy végtelen rácson épül, ezért a poliominó-lapkák bármely irányban szabad elhelyezését kellett lefejlesztenem, rögzített táblaszélek nélkül.</dd></div>
+            </dl>
+            <a class="case-link" href="https://boardgamearena.com/gamepanel?game=frostedblooms" target="_blank" rel="noopener">Játék a BGA-n</a>
+          </div>
+        </article>
+        <article class="case">
+          <div class="case-media">
+            <figure class="case-shot">
+              <img src="images/cases/gotwhatitbakes-bga.jpg" alt="A Got What It Bakes? pékséglapjai és receptkönyve a Board Game Arenán" loading="lazy" width="1200" height="636">
+              <figcaption>A Board Game Arenán</figcaption>
+            </figure>
+            <figure class="case-photo">
+              <img src="images/cases/gotwhatitbakes-table.jpg" alt="A Got What It Bakes? kártyái, kockái és pékséglapjai az asztalon" loading="lazy">
+              <figcaption>Az asztalon</figcaption>
+            </figure>
+          </div>
+          <div class="case-body">
+            <h3>Got What It Bakes?</h3>
+            <p class="meta">Myam Games, 1–4 játékos, 2025</p>
+            <dl class="case-points">
+              <div><dt>A kihívás</dt><dd>A kártyákon sok apró szöveg szerepel, amelyeket a BGA számos nyelvére lefordíthatóvá kellett tenni, és minden kártyahatáshoz egyedi megoldást kellett fejleszteni.</dd></div>
+            </dl>
+            <a class="case-link" href="https://boardgamearena.com/gamepanel?game=gotwhatitbakes" target="_blank" rel="noopener">Játék a BGA-n</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section wrap">
+      <h2>Árak</h2>
+      <div class="pricing-intro">
+        <div>
+          <p class="pricing-lead">Minden játék egyedi árazást kap.</p>
+          <p>Küldje el a szabálykönyvet, és a játékára szabott árajánlatot készítek.</p>
+        </div>
+        <div class="factors">
+          <p class="factors-title">Az ár a következőktől függ</p>
+          <ul>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></svg> A játék összetettsége</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> A projekt határideje</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Egyedi igények, extra funkciók</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="pricing-sub">Fizetési lehetőségek</h3>
+      <p class="pricing-text">A BGA prémium modelljében szereplő játékok után a kiadó havi bevételrészesedést kap. A teljes díj helyett csökkentett díj is választható, ebben az esetben ennek a havi bevételnek egy része engem illet.</p>
+      <div class="options">
+        <div class="option">
+          <h4>Fix díj</h4>
+          <ul class="option-points">
+            <li>Egyszeri fizetés, a megjelenés után esedékes.</li>
+            <li>Ön dönti el, hogy a játék ingyenes vagy prémium lesz-e a BGA-n.</li>
+            <li>Prémium modell esetén a teljes kiadói részesedés az Öné marad.</li>
+          </ul>
+          <figure class="split" aria-label="A prémium bevétel megoszlása: BGA 50%, az Ön kiadói részesedése 50%">
+            <figcaption>Prémium bevétel</figcaption>
+            <div class="split-bar">
+              <span class="bar-fill seg-bga" style="--w: 50%"></span>
+              <span class="bar-fill seg-you" style="--w: 50%"></span>
+            </div>
+            <ul class="legend">
+              <li><i class="seg-bga"></i>BGA 50%</li>
+              <li><i class="seg-you"></i>Az Ön kiadói részesedése 50%</li>
+            </ul>
+          </figure>
+        </div>
+        <div class="option">
+          <h4>Csökkentett díj + bevételrészesedés</h4>
+          <ul class="option-points">
+            <li>Csökkentett egyszeri díj a megjelenés után, a játék várható BGA-sikere alapján.</li>
+            <li>A havi prémium kiadói részesedés egy megállapodott százaléka.</li>
+            <li>A játék a megállapodott ideig a prémium modellben marad.</li>
+            <li>Csak a BGA prémium bevétele oszlik meg, a fizikai példányok eladását ez nem érinti.</li>
+          </ul>
+          <figure class="split" aria-label="A prémium bevétel megoszlása: BGA 50%, a kiadói részesedés megoszlik Ön és az engem illető megállapodott százalék között">
+            <figcaption>Prémium bevétel</figcaption>
+            <!-- the "agreed %" segment width is illustrative, not a real rate -->
+            <div class="split-bar">
+              <span class="bar-fill seg-bga" style="--w: 50%"></span>
+              <span class="bar-fill seg-you" style="--w: 32%"></span>
+              <span class="bar-fill seg-dev" style="--w: 18%"></span>
+            </div>
+            <ul class="legend">
+              <li><i class="seg-bga"></i>BGA 50%</li>
+              <li><i class="seg-you"></i>Az Ön kiadói részesedése</li>
+              <li><i class="seg-dev"></i>Az engem illető megállapodott %</li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+      <p class="footnote">A BGA egy játék prémium bevételének felét tartja meg. A másik fele a kiadói részesedés.</p>
+      <p class="more-info"><a href="https://boardgamearena.com/gamepublishers" target="_blank" rel="noopener">Kiadói tájékoztató a BGA oldalán</a></p>
+
+      <h3 class="pricing-sub">Irányárak</h3>
+      <p class="pricing-text">Tájékoztató árak a költségvetés tervezéséhez. A végleges árat a szabálykönyv átnézése után adom meg. Csökkentett díj + bevételrészesedés esetén az egyszeri díj ennek az árnak egy kisebb része.</p>
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th scope="col">Játéktípus</th>
+              <th scope="col">Irányár</th>
+            </tr>
+          </thead>
+          <!-- bar widths are price / 6500 EUR (the highest price); update them together with the prices -->
+          <tbody>
+            <tr>
+              <th scope="row">Könnyű<span>Rövid szabályok, kevés komponens, például kártya- és családi játékok</span></th>
+              <td>~ 3000 €<span class="price-bar"><span class="bar-fill" style="--w: 46%"></span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">Közepes<span>Több fázis, több komponens, összetettebb felület</span></th>
+              <td>~ 4500 €<span class="price-bar"><span class="bar-fill" style="--w: 69%"></span></span></td>
+            </tr>
+            <tr>
+              <th scope="row">Nehéz<span>Terjedelmes szabályok, sok kártyahatás vagy kiegészítők</span></th>
+              <td>~ 6500 €<span class="price-bar"><span class="bar-fill" style="--w: 100%"></span></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="pricing-sub">Minden projekt tartalmazza</h3>
+      <ul class="includes">
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5c3-1 6-1 10 1v14c-4-2-7-2-10-1Z"/><path d="M22 5c-3-1-6-1-10 1v14c4-2 7-2 10-1Z"/></svg> A játékszabályok teljes körű megvalósítása</li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M6 18h6M9 14v4"/><rect x="17" y="9" width="5" height="11" rx="1"/></svg> Asztali gépre és mobilra tervezett felület</li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17.5 14.5c2.2.3 3.7 2 4 4.5"/></svg> Alfa- és bétatesztelés BGA-játékosokkal</li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="8" width="10" height="12" rx="5"/><path d="M12 11v9M9 5l1.5 2.5M15 5l-1.5 2.5M3 14h4M17 14h4M4 9l3 2M20 9l-3 2M4 20l3-2M20 20l-3-2"/></svg> Hibajavítás és karbantartás a megjelenést követő 3 hónapig</li>
+      </ul>
+
+      <div class="bundle">
+        <svg class="bundle-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="20" width="22" height="22" rx="3"/><rect x="20" y="6" width="22" height="22" rx="3"/><path d="M31 13v8M27 17h8"/></svg>
+        <div>
+          <h3>Több játékot vagy kiegészítőt is a BGA-ra hozna?</h3>
+          <p>Küldje el őket együtt, és kedvezményes ajánlatot kap egy összevont megállapodásra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section wrap">
+      <h2>Gyakran ismételt kérdések</h2>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Fel kell vennem a kapcsolatot a BGA-val, mielőtt árajánlatot kérek?</summary>
+          <p>Nem. Árajánlatot a BGA megkeresése nélkül is kérhet. A projekt későbbi szakaszában kapcsolatba kell lépnie a BGA-val a játék teszteléséhez és a szükséges licencengedélyek megadásához. <a href="https://boardgamearena.com/gamepublishers" target="_blank" rel="noopener">Kiadói tájékoztató a BGA oldalán</a></p>
+        </details>
+        <details class="faq-item">
+          <summary>Mennyi ideig tart egy átültetés?</summary>
+          <p>A játék terjedelmétől függ. Az egyszerűbb játékok hamarabb elkészülnek, mint az összetettek, és az alfa- és bétatesztelésre is időt kell szánni. Az árajánlattal együtt becsült ütemtervet is kap.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Mire van szüksége tőlem?</summary>
+          <p>Az árajánlathoz csak a szabálykönyvre. A megállapodás után szükségem lesz a játék grafikai fájljaira, valamint egy kapcsolattartóra az Ön részéről, aki teszteli és véleményezi az átültetést.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Követhetem a munka menetét?</summary>
+          <p>Igen. Amíg az átültetés nem játszható, általában képernyőképeket vagy videókat osztok meg a haladásról. Amint játszható, Ön is kipróbálhatja a BGA-n, és visszajelzést küldhet. Az Ön jóváhagyása nélkül semmi sem jelenik meg.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Mi a különbség az ingyenes és a prémium játék között?</summary>
+          <p>Ingyenes játékot bárki indíthat a BGA-n. Prémium játékot csak BGA Prémium tag indíthat, de csatlakozni bárki csatlakozhat hozzá. A prémium játékok után a kiadó részesedést kap a BGA prémium bevételéből. A kiadó bármikor válthat a két modell között. <a href="https://boardgamearena.com/gamepublishers" target="_blank" rel="noopener">Kiadói tájékoztató a BGA oldalán</a></p>
+        </details>
+        <details class="faq-item">
+          <summary>A BGA vagy Ön tulajdonjogot szerez a játék felett?</summary>
+          <p>Nem. Csak licencet használunk, a játék az Öné marad. <a href="https://boardgamearena.com/gamepublishers" target="_blank" rel="noopener">Kiadói tájékoztató a BGA oldalán</a></p>
+        </details>
+        <details class="faq-item">
+          <summary>Lehet nulla euró az egyszeri díj a csökkentett díj + bevételrészesedés esetén?</summary>
+          <p>Igen, de csak akkor, ha kellő magabiztossággal kijelenthető, hogy a játék hatalmas siker lesz a BGA-n. Ebben az esetben lehetséges kizárólag a bevételrészesedésen keresztül fizetni.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Marketinggel is foglalkozik?</summary>
+          <p>Csökkentett díj + bevételrészesedés esetén korlátozott marketingtámogatásban is megállapodhatunk.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Később kiegészítők is felkerülhetnek?</summary>
+          <p>Igen. A kiegészítőkre külön árajánlat készül, akárcsak egy új játékra, de általában olcsóbbak, mert az alapjáték már elkészült.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hogyan működik a kedvezmény több játék esetén?</summary>
+          <p>Ha több játékot vagy kiegészítőt együtt rendel meg, egyetlen összevont megállapodásként árazom őket, alacsonyabb végösszeggel, mint ha külön-külön készülne rájuk ajánlat. A pontos kedvezmény a játékoktól függ, és az árajánlatban szerepel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Mi történik a 3 hónapos karbantartás után?</summary>
+          <p>Amíg egy másik játékon is együtt dolgozunk, a karbantartás addig folytatódik, amíg az a projekt aktív. Ezt követően megállapodhatunk folyamatos karbantartásban, vagy igény szerinti javításokban és frissítésekben.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="decos" aria-hidden="true">
+        <svg class="deco deco-hex" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 86 29v42L50 92 14 71V29Z"/><path d="M50 30 68 40v20L50 70 32 60V40Z"/></svg>
+        <svg class="deco deco-die deco-die-2" viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="14" width="72" height="72" rx="14"/><circle class="pip" cx="34" cy="34" r="6"/><circle class="pip" cx="66" cy="34" r="6"/><circle class="pip" cx="50" cy="50" r="6"/><circle class="pip" cx="34" cy="66" r="6"/><circle class="pip" cx="66" cy="66" r="6"/></svg>
+      </div>
+      <div class="wrap">
+        <h2>Vigyük együtt a játékát a Board Game Arenára</h2>
+        <p>Küldje el a szabálykönyvet vagy a projekt rövid leírását, és árajánlattal jelentkezem.</p>
+        <div class="notice">
+          <svg class="notice-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.75" r=".6"/></svg>
+          <p><strong>Fontos:</strong> mesterséges intelligenciával készült grafikát tartalmazó játékok fejlesztését nem vállalom, ezért ilyen projektekkel kérem, ne keressen meg.</p>
+        </div>
+        <div class="contact-actions">
+          <span class="contact-email">toth.abel.tibor2@gmail.com</span>
+          <!-- shown by script.js (the copy needs JS); the address above stays visible without it -->
+          <button class="btn btn-outline contact-btn copy-btn" type="button" data-copy="toth.abel.tibor2@gmail.com" data-copied-msg="E-mail-cím kimásolva" data-prompt="Másolja ki az e-mail-címet:" hidden><span class="copy-label">E-mail-cím másolása</span><span class="copy-done" aria-hidden="true">&#10003; Kimásolva!</span></button>
+          <span class="sr-only" role="status"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-name">Tóth Ábel Tibor<span>Szabadúszó Board Game Arena-fejlesztő</span></p>
+      <a class="to-top" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Vissza a tetejére</a>
+      <p class="footer-legal">© 2026 Tóth Ábel Tibor. A játékok nevei és grafikái a kiadóik tulajdonát képezik.</p>
+    </div>
+  </footer>
+</body>
+</html>
